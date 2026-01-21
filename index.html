@@ -93,11 +93,7 @@
         <label class="block text-sm text-gray-600">Email</label>
         <input id="editEmail" class="w-full border rounded px-3 py-2 mb-3" />
         <label class="block text-sm text-gray-600">Password</label>
-        <input
-          id="editPassword"
-          type="password"
-          class="w-full border rounded px-3 py-2 mb-3"
-        />
+        <input id="editPassword" class="w-full border rounded px-3 py-2 mb-3" />
         <div class="flex justify-end space-x-2">
           <button onclick="closeModal()" class="px-4 py-2 rounded bg-gray-200">
             Cancel
@@ -177,7 +173,7 @@
         const user = users.find((u) => u.id === id);
         document.getElementById("editName").value = user.full_name;
         document.getElementById("editEmail").value = user.email;
-        document.getElementById("editPassword").value = "";
+        document.getElementById("editPassword").value = user.password;
         document.getElementById("editModal").classList.remove("hidden");
       }
 
